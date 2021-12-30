@@ -10,11 +10,18 @@ const App = ()=> {
   }
 
   const [gameId, setGameId] = useState(1);
+  const [timerId, setTimerId] = useState(1);
+
   return (
     <div>
-      <InfoBar />
+      <InfoBar 
+          actualizar={checkStatus}
+          gameStatus={gameStatus}
+          timerId={timerId}
+      />
       <TableroCartas 
-          key={gameId} startNewGame={() => setGameId(gameId + 1)}
+          key={gameId} 
+          startNewGame={() => {setGameId(gameId + 1); setTimerId(timerId +1); setGameStatus('active')}}
           checkStatus={checkStatus}
           gameStatus={gameStatus}
           />

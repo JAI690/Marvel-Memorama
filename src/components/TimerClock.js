@@ -11,6 +11,8 @@ const TimerClock = props => {
     const tick = () => {
         if(timer>0){
             setTimer(timer-1);
+        }else{
+            props.actualizar('lost')
         }
     }
 
