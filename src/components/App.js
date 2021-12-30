@@ -8,16 +8,14 @@ const App = ()=> {
 
   const checkStatus = (status) => {
       setGameProxy(status)
+      setTimeout(() => {
+        setGameStatus(status)
+    }, 2000);
   }
 
   const [gameId, setGameId] = useState(1);
   const [timerId, setTimerId] = useState(1);
 
-  if(gameProxy!=='active'){
-    setTimeout(() => {
-        setGameStatus(gameProxy)
-    }, 2000);
-  }
 
   return (
     <div>
@@ -29,7 +27,7 @@ const App = ()=> {
       />
       <TableroCartas 
           key={gameId} 
-          startNewGame={() => {setGameId(gameId + 1); setTimerId(timerId +1); setGameStatus('active'); setGameProxy('active')}}
+          startNewGame={() => {setGameId(gameId + 1); setTimerId(timerId +1); setGameStatus('active'); setGameProxy('active');}}
           checkStatus={checkStatus}
           gameStatus={gameStatus}
           />

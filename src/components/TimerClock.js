@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const TimerClock = props => {
-    const [timer,setTimer] = useState(15);
+    const [timer,setTimer] = useState(30);
 
     React.useEffect(() => {
         const timerId = setInterval(() => tick(), 1000);
@@ -9,7 +9,7 @@ const TimerClock = props => {
     });
 
     const tick = () => {
-        if(props.gameStatus!=='won'){
+        if(props.gameProxy==='active'){
             if(timer>0){
                 setTimer(timer-1);
             }else{

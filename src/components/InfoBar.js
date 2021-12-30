@@ -29,6 +29,7 @@ class InfoBar extends React.Component {
                     key={this.props.timerId}
                     actualizar={this.props.actualizar}
                     gameStatus={this.props.gameStatus}
+                    gameProxy={this.props.gameProxy}
                 />
             </div>
         );
