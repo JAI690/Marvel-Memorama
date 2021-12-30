@@ -87,7 +87,6 @@ class MarvelList extends React.Component {
     }
 
     agregarCarta = async(nombre,id) => {
-
         if(!this.state.idSeleccionados.includes(id) & !this.state.usados.includes(id)){
             switch (this.state.seleccion.length) {
                 case 0:
@@ -104,26 +103,28 @@ class MarvelList extends React.Component {
                         //ganaste
                         this.state.usados.push(this.state.idSeleccionados[0])
                         this.state.usados.push(this.state.idSeleccionados[1])
+                        this.setState({
+                            seleccion: [],
+                            idSeleccionados: []
+                        }); 
                     }else{
                     //elige de nuevo
-                        if(this.state.intentos>5){
+                        if(this.state.intentos>4){
                             console.log('Game Over');
                             this.props.actualizar('lost')
                         }else{
                             this.state.estatusJuego.push(...this.state.idSeleccionados)
+                            setTimeout(()=>{this.setState({estatusJuego:[]})},1000)
                             this.setState({
-                                now:'blocked',
-                                intentos: this.state.intentos+1
+                                //now:'blocked',
+                                intentos: this.state.intentos+1,
+                                seleccion: [],
+                                idSeleccionados: []
                             })
                         }    
                     }
-                    this.setState({
-                        seleccion: [],
-                        idSeleccionados: []
-                    });
-                    setTimeout(()=>{this.setState({now:'not-blocked'})},1500)
-                    
                     break;
+
                 default:
                     break;
             }
