@@ -6,7 +6,9 @@ const TableroCartas = (props)=> {
     return (
         <div>
         {props.gameStatus !== 'active' ? (
-                <PlayAgain onClick={props.startNewGame} gameStatus={props.gameStatus} />
+                setTimeout(() => {
+                    <PlayAgain onClick={props.startNewGame} gameStatus={props.gameStatus} />
+                }, 2000)
             ) : (
                 <MarvelList actualizar={props.checkStatus} />
             )}
