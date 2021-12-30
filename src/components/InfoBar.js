@@ -1,4 +1,5 @@
 import React from "react";
+import TimerClock from "./TimerClock";
 
 const styles = {
     general: {
@@ -23,6 +24,7 @@ class InfoBar extends React.Component {
         return (
             <div style={styles.general}>
                 <h1 style={styles.text}>Info Bar</h1>
+                <TimerClock />
             </div>
         );
     };
