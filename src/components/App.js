@@ -5,6 +5,8 @@ import InfoBar from "./InfoBar";
 const App = ()=> {
   const [gameStatus,setGameStatus] = useState('active');
   const [gameProxy,setGameProxy] = useState('active');
+  const [gameId, setGameId] = useState(1);
+  const [timerId, setTimerId] = useState(1);
 
   const checkStatus = (status) => {
       setGameProxy(status)
@@ -13,15 +15,10 @@ const App = ()=> {
     }, 2000);
   }
 
-  const [gameId, setGameId] = useState(1);
-  const [timerId, setTimerId] = useState(1);
-
-
   return (
     <div>
       <InfoBar 
           actualizar={checkStatus}
-          gameStatus={gameStatus}
           gameProxy={gameProxy}
           timerId={timerId}
       />

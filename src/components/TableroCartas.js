@@ -3,7 +3,6 @@ import MarvelList from "./MarvelList";
 import PlayAgain from "./playAgain";
 
 const TableroCartas = (props)=> {
-    console.log(props.gameStatus)
     return (
         <div>
         {props.gameStatus === 'active' ? (
