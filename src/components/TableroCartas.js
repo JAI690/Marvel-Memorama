@@ -5,12 +5,10 @@ import PlayAgain from "./playAgain";
 const TableroCartas = (props)=> {
     return (
         <div>
-        {props.gameStatus !== 'active' ? (
-                setTimeout(() => {
-                    <PlayAgain onClick={props.startNewGame} gameStatus={props.gameStatus} />
-                }, 2000)
-            ) : (
+        {props.gameStatus === 'active' ? (
                 <MarvelList actualizar={props.checkStatus} />
+            ) : (
+                <PlayAgain onClick={props.startNewGame} gameStatus={props.gameStatus} />
             )}
         </div>
   );

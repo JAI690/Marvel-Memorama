@@ -130,7 +130,7 @@ class MarvelList extends React.Component {
             }
             if(this.state.usados.length === 8){
                 console.log('Ganaste el juego, Felicidades!!')
-                setTimeout(()=>{this.props.actualizar('won')},2000);
+                this.props.actualizar('won')
             }
         }
     }

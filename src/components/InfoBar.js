@@ -23,10 +23,12 @@ class InfoBar extends React.Component {
     render(){
         return (
             <div style={styles.general}>
-                <h1 style={styles.text}>Info Bar</h1>   
+                <h1 style={styles.text}>Info Bar</h1>  
+                <p>{this.props.gameStatus}</p> 
                 <TimerClock 
                     key={this.props.timerId}
                     actualizar={this.props.actualizar}
+                    gameStatus={this.props.gameStatus}
                 />
             </div>
         );
