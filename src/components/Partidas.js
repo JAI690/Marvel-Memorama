@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import PartidaDisplay from './PartidaDisplay'
+
+const styles = {
+    tabla: {
+        marginLeft: 'auto',
+        marginRight: 'auto'
+    }
+}
+
 const Name = props => {
-    const [variable,setVariable] = useState();
     
     return (
         <div>
-            <table>
+            <table style={styles.tabla}>
                 <thead>
                     <tr>
                         <th>Intento</th>
