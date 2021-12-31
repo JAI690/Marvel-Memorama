@@ -9,6 +9,8 @@ const App = ()=> {
   const [timerId, setTimerId] = useState(1);
   const [intentos, setIntentos] = useState(5);
   const [partidas, setPartidas] = useState([])
+  const [tiempo, setTiempo] = useState(30);
+  const [timer,setTimer] = useState(30);
 
   const checkStatus = (status) => {
       setGameProxy(status)
@@ -16,14 +18,23 @@ const App = ()=> {
         setGameStatus(status)
     }, 2000);
     if(status!=='active'){
-      guardarPartida(status,timerId,intentos);
-      console.log(partidas)
+      guardarPartida(status,timer,intentos)
     }
   }
 
   const usarIntento = () => {
       setIntentos(intentos-1);
     }
+
+  const registrarTiempo = () => {
+    if(gameProxy==='active'){
+      if(timer>0){
+          setTimer(timer-1);
+      }else{
+        checkStatus('lost')
+      }
+  }
+  }
   
   const guardarPartida = (status,tiempo,estrellas) => {
     let partida = {
@@ -51,8 +62,10 @@ const App = ()=> {
           actualizar={checkStatus}
           gameProxy={gameProxy}
           timerId={timerId}
+          time={timer}
           intentos={intentos}
           partidas={partidas}
+          registrarTiempo={registrarTiempo}
       />
       <TableroCartas 
           key={gameId} 

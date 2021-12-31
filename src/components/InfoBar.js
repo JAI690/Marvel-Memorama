@@ -32,7 +32,6 @@ class InfoBar extends React.Component {
         console.log(this.props.partidas);
     }
 
-    
     render(){
         return (
             <div style={styles.general}>
@@ -42,9 +41,11 @@ class InfoBar extends React.Component {
                         <td style={styles.td}><Partidas partidas={this.props.partidas}/></td>
                         <td style={styles.td}><IntentosRestantes intentos={this.props.intentos}/></td>
                         <td style={styles.td}><TimerClock 
+                            time={this.props.time}
                             key={this.props.timerId}
                             actualizar={this.props.actualizar}
                             gameProxy={this.props.gameProxy}
+                            registrarTiempo={this.props.registrarTiempo}
                         /></td>
                     </tr>
                     </tbody>
