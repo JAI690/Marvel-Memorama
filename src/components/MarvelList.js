@@ -109,9 +109,10 @@ class MarvelList extends React.Component {
                         }); 
                     }else{
                     //elige de nuevo
-                        if(this.state.intentos>4){
+                        if(this.props.intentos===1){
                             console.log('Game Over');
                             this.props.actualizar('lost')
+                            this.props.usarIntento();
                         }else{
                             this.state.estatusJuego.push(...this.state.idSeleccionados)
                             setTimeout(()=>{this.setState({estatusJuego:[],now:'not-blocked'})},1100)
@@ -121,7 +122,7 @@ class MarvelList extends React.Component {
                                 seleccion: [],
                                 idSeleccionados: []
                             });
-                            
+                            this.props.usarIntento();
                         }    
                     }
                     break;
