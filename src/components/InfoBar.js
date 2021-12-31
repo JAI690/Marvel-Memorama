@@ -1,4 +1,5 @@
 import React from "react";
+
 import IntentosRestantes from "./IntentosRestantes";
 import TimerClock from "./TimerClock";
 
@@ -12,8 +13,14 @@ const styles = {
         border: '4px solid #000',
         margin: '20px',
         padding: '10px'
+    },
+    td: {
+        width: '10%',
+        border: '1px solid #000',
+        textAlign: 'center'
     }
 }
+
 
 class InfoBar extends React.Component {
     constructor(props) {
@@ -26,12 +33,12 @@ class InfoBar extends React.Component {
     render(){
         return (
             <div style={styles.general}>
-                <table>
+                <table >
                     <tbody>
                     <tr>
-                        <td><h1 style={styles.text}>Info Bar</h1>  </td>
-                        <td><IntentosRestantes intentos={this.props.intentos}/></td>
-                        <td><TimerClock 
+                        <td style={styles.td}><h1 style={styles.text}>Info Bar</h1>  </td>
+                        <td style={styles.td}><IntentosRestantes intentos={this.props.intentos}/></td>
+                        <td style={styles.td}><TimerClock 
                             key={this.props.timerId}
                             actualizar={this.props.actualizar}
                             gameProxy={this.props.gameProxy}

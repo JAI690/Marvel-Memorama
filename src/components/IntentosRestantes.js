@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const IntentosRestantes = props => {
-    const [variable,setVariable] = useState();
     
     return (
         <div>

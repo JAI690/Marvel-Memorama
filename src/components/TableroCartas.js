@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MarvelList from "./MarvelList";
 import PlayAgain from "./playAgain";
 
