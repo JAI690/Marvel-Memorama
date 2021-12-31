@@ -7,7 +7,7 @@ const App = ()=> {
   const [gameProxy,setGameProxy] = useState('active');
   const [gameId, setGameId] = useState(1);
   const [timerId, setTimerId] = useState(1);
-  const [intentos, setIntentos] = useState(2);
+  const [intentos, setIntentos] = useState(5);
 
   const checkStatus = (status) => {
       setGameProxy(status)

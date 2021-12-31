@@ -1,4 +1,5 @@
 import React from "react";
+import IntentosRestantes from "./IntentosRestantes";
 import TimerClock from "./TimerClock";
 
 const styles = {
@@ -29,7 +30,7 @@ class InfoBar extends React.Component {
                     <tbody>
                     <tr>
                         <td><h1 style={styles.text}>Info Bar</h1>  </td>
-                        <td><h2>Intentos Restantes: {this.props.intentos}</h2></td>
+                        <td><IntentosRestantes intentos={this.props.intentos}/></td>
                         <td><TimerClock 
                             key={this.props.timerId}
                             actualizar={this.props.actualizar}
