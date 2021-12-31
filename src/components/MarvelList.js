@@ -115,7 +115,7 @@ class MarvelList extends React.Component {
                             this.props.usarIntento();
                         }else{
                             this.state.estatusJuego.push(...this.state.idSeleccionados)
-                            setTimeout(()=>{this.setState({estatusJuego:[],now:'not-blocked'})},1100)
+                            setTimeout(()=>{this.setState({estatusJuego:[],now:'not-blocked'})},1000)
                             this.setState({
                                 now:'blocked',
                                 intentos: this.state.intentos+1,
