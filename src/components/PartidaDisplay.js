@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Name = props => {
-    const [variable,setVariable] = useState();
     
     return (
         <tr>
