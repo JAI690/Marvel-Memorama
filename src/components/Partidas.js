@@ -21,7 +21,7 @@ const Name = props => {
                     </tr>
                 </thead>
                 <tbody>
-                {props.partidas.map(partida => 
+                {props.partidas.slice(props.partidas.length-3).map(partida => 
                             <PartidaDisplay
                                 key={partida.id}
                                 status={partida.status}
