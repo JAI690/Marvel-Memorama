@@ -70,7 +70,7 @@ const App = ()=> {
       />
       <TableroCartas 
           key={gameId} 
-          startNewGame={() => {setGameId(gameId + 1); setTimerId(timerId +1); setGameStatus('active'); setGameProxy('active'); setIntentos(5)}}
+          startNewGame={() => {setGameId(gameId + 1); setTimerId(timerId +1); setGameStatus('active'); setGameProxy('active'); setIntentos(5); setTimer(30)}}
           checkStatus={checkStatus}
           gameStatus={gameStatus}
           intentos={intentos}
