@@ -6,7 +6,8 @@ const TableroCartas = (props)=> {
     return (
         <div>
         {props.gameStatus === 'active' ? (
-                <MarvelList actualizar={props.checkStatus} />
+                <MarvelList actualizar={props.checkStatus} intentos={props.intentos}
+                usarIntento={props.usarIntento} />
             ) : (
                 <PlayAgain onClick={props.startNewGame} gameStatus={props.gameStatus} />
             )}
