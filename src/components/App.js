@@ -37,16 +37,18 @@ const App = ()=> {
   }
   
   const guardarPartida = (status,tiempo,estrellas) => {
-    let partida = {
-    };
+    let partida = {};
+    const id = Math.random();
     if(status==='lost'){
       partida = {
+        id,
         status,
         tiempo:0,
         estrellas:0
       }
     }else{
       partida = {
+        id,
         status,
         tiempo,
         estrellas

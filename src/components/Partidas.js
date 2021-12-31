@@ -16,6 +16,7 @@ const Name = props => {
                 <tbody>
                 {props.partidas.map(partida => 
                             <PartidaDisplay
+                                key={partida.id}
                                 status={partida.status}
                                 tiempo={partida.tiempo}
                                 estrellas={partida.estrellas}
