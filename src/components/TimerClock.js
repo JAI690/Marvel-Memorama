@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 
+const styles = {
+    display:{
+        textAlign: 'center'
+    }
+}
+
 const TimerClock = props => {
     const [timer,setTimer] = useState(30);
 
@@ -20,8 +26,7 @@ const TimerClock = props => {
 
     return (
         <div>
-            <h2>Segundos restantes: {timer}</h2>
-            <button onClick={() => setTimer(timer-1)}>click</button>
+            <h2 style={styles.display}>Segundos restantes: {timer}</h2>
         </div>
     );
 };

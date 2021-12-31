@@ -3,7 +3,9 @@ import TimerClock from "./TimerClock";
 
 const styles = {
     general: {
-        margin: '40px 80px 40px 80px'
+        margin: '40px 80px 40px 80px',
+        border: '4px solid #000',
+        padding: '10px'
     },
     text: {
         border: '4px solid #000',
