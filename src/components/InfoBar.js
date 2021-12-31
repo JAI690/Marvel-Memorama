@@ -10,14 +10,8 @@ const styles = {
         border: '4px solid #000',
         padding: '10px'
     },
-    text: {
-        border: '4px solid #000',
-        margin: '20px',
-        padding: '10px'
-    },
     td: {
         width: '10%',
-        border: '1px solid #000',
         textAlign: 'center'
     }
 }
@@ -29,7 +23,7 @@ class InfoBar extends React.Component {
         this.state = {
             
         };
-        console.log(this.props.partidas);
+
     }
 
     render(){
