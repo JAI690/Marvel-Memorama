@@ -5,9 +5,9 @@ const Name = props => {
     
     return (
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td>{props.status}</td>
+            <td>{props.tiempo}</td>
+            <td>{props.estrellas}</td>
         </tr>
     );
      

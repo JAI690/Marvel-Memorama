@@ -14,10 +14,13 @@ const Name = props => {
                     </tr>
                 </thead>
                 <tbody>
-                    <PartidaDisplay />
-                    <PartidaDisplay />
-                    <PartidaDisplay />
-                    
+                {props.partidas.map(partida => 
+                            <PartidaDisplay
+                                status={partida.status}
+                                tiempo={partida.tiempo}
+                                estrellas={partida.estrellas}
+                            />
+                )}   
                 </tbody>
             </table>  
         </div>
