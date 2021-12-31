@@ -56,7 +56,6 @@ const MarvelCard = props => {
         if(now==='not-blocked'){
            setVisibilidad(true);
         }
-        console.log(estatus)
     };
 
     if(estatus.includes(id)){
