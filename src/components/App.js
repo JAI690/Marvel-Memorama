@@ -8,8 +8,7 @@ const App = ()=> {
   const [gameId, setGameId] = useState(1);
   const [timerId, setTimerId] = useState(1);
   const [intentos, setIntentos] = useState(5);
-  const [partidas, setPartidas] = useState([])
-  const [tiempo, setTiempo] = useState(30);
+  const [partidas] = useState([])
   const [timer,setTimer] = useState(30);
 
   const checkStatus = (status) => {
