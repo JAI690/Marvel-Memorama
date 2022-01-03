@@ -33,7 +33,7 @@ const styles = {
         objectFit: 'cover',
         border: '3px solid white',
         height: '220px',
-        width: '97%',
+        width: '98%',
         display: 'block',
         margin: 'auto'
     },
