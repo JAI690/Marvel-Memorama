@@ -8,8 +8,9 @@ import data from '../data/datos';
 const styles = {
     grid: {
         display: 'grid',
-        'gridGap': '50px',
-        'gridTemplateColumns': '400px 400px 400px 400px',
+        'gridGap': '5%',
+        'gridTemplateColumns': '20% 20% 20% 20%',
+        //'gridTemplateColumns': '400px 400px 400px 400px',
         'justifyContent':'center',
         marginTop: '40px'
     }
