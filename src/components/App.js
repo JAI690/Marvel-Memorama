@@ -12,7 +12,7 @@ const styles = {
   },
   item: {
     border: '4px solid green',
-    width: '90%',
+    width: '100%',
     margin: 'auto',
   }
 }
