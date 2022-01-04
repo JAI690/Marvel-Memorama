@@ -4,7 +4,7 @@ import PlayAgain from "./playAgain";
 
 const styles = {
     general: {
-      border: '4px solid #000',
+
       height: '100%'
     }
   }

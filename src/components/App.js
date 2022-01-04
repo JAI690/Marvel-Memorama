@@ -4,14 +4,12 @@ import InfoBar from "./InfoBar";
 
 const styles = {
   general: {
-    border: '4px solid #00F',
     margin: 'auto',
     marginTop: '2%',
     width: '80%',
     padding: '20px'
   },
   item: {
-    border: '4px solid green',
     width: '100%',
     margin: 'auto',
   }
