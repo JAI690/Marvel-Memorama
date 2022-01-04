@@ -8,10 +8,10 @@ const styles = {
     general: {
         //margin: '40px 80px 40px 80px',
         border: '4px solid #000',
-        //padding: '10px'
+        padding: '10px'
     },
     td: {
-        //width: '10%',
+        width: '10%',
         textAlign: 'center'
     }
 }
