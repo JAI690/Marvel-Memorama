@@ -8,10 +8,15 @@ import data from '../data/datos';
 const styles = {
     grid: {
         display: 'grid',
-        'gridGap': '50px',
-        'gridTemplateColumns': '400px 400px 400px 400px',
+        'gridGap': '2%',
+        'gridTemplateColumns': '22% 22% 22% 22%',
+        //'gridTemplateColumns': '400px 400px 400px 400px',
         'justifyContent':'center',
-        marginTop: '40px'
+        marginTop: '2%',
+        marginBottom: '2%',
+        //height: '700px',
+        height: '650px',
+        objectFit: 'contain'
     }
 };
 

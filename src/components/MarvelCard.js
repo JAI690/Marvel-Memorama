@@ -4,42 +4,49 @@ import React, { useState } from 'react';
 const styles = {
     tarjeta: {
         backgroundColor: 'gray',
-        border: '5px solid black',
-        margin: '10px',
+        border: '4px solid black',
+        height: '300px',
+        width: '100%'
     },
     tarjetaVacia: {
         backgroundColor: 'gray',
+        height: '300px',
+        width: '100%',
         border: '5px solid black',
-        margin: '10px',
-        height: '410px',
+        margin: 'auto',
         display: 'bloc',
+
     },
     container: {
-        padding: '2px 16px',
         backgroundColor: 'lightgray',
-        border: '4px solid RGB(92,58,58)'
+        border: '4px solid RGB(92,58,58)',
+        width: '98%',
+        height: '20%',
+        margin: 'auto'
+    },
+    contenedorImg: {
+        width: '100%',
+        height: '78%',
+        margin: 'auto'
     },
     img: {
-        height: '300px',
-        width: '300px',
+        objectFit: 'cover',
+        border: '3px solid white',
+        height: '220px',
+        width: '98%',
         display: 'block',
-        'marginLeft': 'auto',
-        'marginRight': 'auto',
-        'marginTop': '20px',
-        'marginBottom': '5px',
-        border: '3px solid white'
+        margin: 'auto'
     },
     imgVacia:{
-        height: '300px',
-        width: '300px',
+        height: '100%',
+        width: '100%',
         display: 'block',
-        'marginLeft': 'auto',
-        'marginRight': 'auto',
-        'marginTop': '50px',
-        'marginBottom': '5px',
+        objectFit: 'contain',
+        margin: 'auto'
     },
     titulo: {
         'textAlign': 'center'
+
     }
 };
 
@@ -68,10 +75,12 @@ const MarvelCard = props => {
     return (
         <div>
             <div style={styles.tarjeta} hidden={!visibilidad}>
-                <img alt="notFound" src={img}  style={styles.img} />
-                <div style={styles.container}>
-                    <h2 style={styles.titulo}>{name}</h2>
-                </div>
+                    <div style={styles.contenedorImg}>
+                        <img alt="notFound" src={img}  style={styles.img} />
+                    </div>
+                    <div style={styles.container}>
+                        <h4 style={styles.titulo}>{name}</h4>
+                    </div>
             </div>
             <div onClick={()=>{agregarCard(name,id); voltear()}} style={styles.tarjetaVacia} hidden={visibilidad}>
                 <img alt="notFound" src='logo512.png' style={styles.imgVacia} />
