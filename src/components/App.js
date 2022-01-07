@@ -73,6 +73,7 @@ const App = ()=> {
   return (
     <div style={styles.general}>
       <table width={'100%'}>
+        <tbody>
         <tr>
           <td>
             <div style={styles.item}>
@@ -102,6 +103,7 @@ const App = ()=> {
                 </div>
           </td>
         </tr>
+        </tbody>
       </table>
     </div>
   );
