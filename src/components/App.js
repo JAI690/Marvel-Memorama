@@ -48,7 +48,7 @@ const App = ()=> {
   }
   }
   
-  const guardarPartida = (status,tiempo,estrellas) => {
+  const guardarPartida = (status,tiempoPartida,estrellas) => {
     let partida = {};
     const id = Math.random();
     if(status==='lost'){
@@ -62,7 +62,7 @@ const App = ()=> {
       partida = {
         id,
         status,
-        tiempo,
+        tiempo:30-tiempoPartida,
         estrellas
       }
     }
