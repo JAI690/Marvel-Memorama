@@ -16,7 +16,7 @@ const TableroCartas = (props)=> {
                 <MarvelList actualizar={props.checkStatus} intentos={props.intentos}
                 usarIntento={props.usarIntento} />
             ) : (
-                <PlayAgain onClick={props.startNewGame} gameStatus={props.gameStatus} />
+                <PlayAgain onClick={props.startNewGame} gameStatus={props.gameStatus} intentos={props.intentos}/>
             )}
         </div>
   );

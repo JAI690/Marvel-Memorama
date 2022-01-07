@@ -1,8 +1,9 @@
 import React from 'react';
+import EstrellasDisplay from './EstrellasDisplay';
 
 const styles = {
 	main: {
-		width: '80%',
+		width: '90%',
 		margin: 'auto',
 		marginTop: '5%',
 		marginBottom: '5%',
@@ -23,6 +24,11 @@ const styles = {
 	},
 	texto: {
 		textAlign: 'center'
+	},
+	estrellas: {
+		margin: 'auto',
+		padding: '10px',
+		marginBottom: '2%'
 	}
 }
 
@@ -43,6 +49,7 @@ const PlayAgain = props => {
 			>
 			<h1 style={styles.texto}>{props.gameStatus === 'won' ?  'Nice' : 'Game Over' }</h1>
 			</div>
+			<div style={styles.estrellas}><EstrellasDisplay  intentos={props.intentos} gameStatus={props.gameStatus}/></div>
 			<button onMouseOver={changeBackground} onMouseLeave={changeBackgroundOriginal}  style={styles.boton} onClick={props.onClick}>Play Again</button>
 	</div>
 	);
