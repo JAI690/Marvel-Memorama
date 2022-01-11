@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const styles = {
     display:{
@@ -9,12 +9,18 @@ const styles = {
 const TimerClock = props => {
 
     React.useEffect(() => {
-        const timerId = setInterval(() => tick(), 1000);
+        const timerId = setInterval(() => tick(), 1000)  
         return () => clearInterval(timerId);
     });
 
+    const [contador,setContador] = useState(0);
+
     const tick = () => {
-        props.registrarTiempo()
+        if(contador<2){
+            setContador(contador+1)
+        }else{
+            props.registrarTiempo()
+        }
     }
 
     return (
